@@ -1,0 +1,175 @@
+<html>
+<head>
+	<title>Shop Site</title>
+	<style>
+		#h{
+			text-align:right;
+			border: 1px solid black;
+			background-color : lightyellow; 
+		}
+		span{ color:red; }
+		body{
+		background-image:url('');
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+		.butn{
+			background-color: #fb641b;
+		}
+		td{ color: rgb(143, 202, 33); }
+	</style>
+	<script type="text/javascript">
+		function empty(str,id){
+				if (str==""){
+					id.innerText="*This filed is mandatory.";
+					return false;
+				}
+				else{
+					id.innerText="";
+					return true;
+				}
+			}
+			function key(){
+				if((event.keyCode>=65 && event.keyCode<=90) || event.keyCode==8 || event.keyCode==9 )
+					return true;
+				else{
+					event.preventDefault();
+					return false;
+				}
+			}
+			function validate(){
+				// Name validation
+				if (f.Name.value == ""){
+					alert("Name filed in mandatory.");
+					return false;
+				}
+				else{
+					str=f.Name.value;
+					for (let i of str){
+						if(!((i >= "a" && i <="z") || (i >="A" && i<="Z"))){
+							alert("Not a valid name.\nName contains only charcters.");
+							return false;
+						}
+					}
+				}
+				//address validation
+				if (f.fa1.value == ""){
+					alert("Adress line1 filed in mandatory.");
+					return false;
+				}
+				//address validation
+				if (f.fa2.value == ""){
+					alert("Adress line2 filed in mandatory.");
+					return false;
+				}
+				// address validation
+				if (f.fa3.value == ""){
+					alert("Pincode filed in mandatory.");
+					return false;
+				}
+				else{
+					num=f.fa3.value;
+					if (num.length != 6){
+						alert("Pincode is not valid");
+						return false;
+					}
+				}
+				// address validation
+				if (f.fa4.value == ""){
+					alert("City filed in mandatory.");
+					return false;
+				}
+				// address validation
+				if (f.fa5.value == ""){
+					alert("State filed in mandatory.");
+					return false;
+				}
+				// Mobile no validation
+				if (f.Mnumber.value == ""){
+					alert("Mobile no filed in mandatory.");
+					return false;
+				}
+				else{
+					num=f.Mnumber.value;
+					if (num.length != 10){
+						alert("Mobile no is not valid");
+						return false;
+					}
+				}
+				// Email validation
+				if (f.email.value == ""){
+					alert("Email filed is mandatory.");
+					return false;
+				}
+				else{
+					var e1 = f.email.value;
+					var eregex	= /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+					if (!eregex.test(e1)){
+						alert("Enter valid email id in nirmauni formate.");
+						return false;
+					}
+				}
+				// Password Validation
+				if (f.psw.value == ""){
+					alert("Password filed in mandatory.");
+					return false;
+				}
+				else{
+					ps=f.psw.value;
+					var p = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])/;
+					if (ps.length < 8 || ps.length > 16){
+						alert("Password length is not between 8 to 16");
+						return false;
+					}
+					else if(!p.test(ps)){
+						alert("Password must contains atleast one lowercase charcter.\nPassword must contains atleast one Uppercase charcter.\nPassword must contains atleast one digit.\nPassword must contains atleast one special charcter.");
+						return false;
+					}
+					else if (f.Cpsw.value == ""){
+						alert("Confirm Password filed in mandatory.");
+						return false;
+					}
+					else if (ps != f.Cpsw.value){
+						alert("Confirm Password and Password must be same.");
+						return false;
+					}
+				}
+			}
+	</script>
+</head>
+<body bgcolor="cornsilk">
+	<div style="color: rgb(225, 73, 17); text-align: center; background-color : rgb(59, 97, 152); font-size: X-large;">Shop Under ₹499</div>
+	<center><h4 style="color: Green; font-size: large;">Registration Page</h4></center>
+	<form action="prac9-login.html" method="get" name="f">
+		<table style="float:left; margin-left:380px; margin-right:380px; width:70%;" >
+		<tr>
+	      <td>
+			Name: <input type="text" id=Sn name="Name" placeholder="Enter your name" size="25" onblur="return empty(Sn.value,k)" > <span id="k"></span>
+		<br><br>
+			Adress Line1: <input type="text" id=fa1 name="Adress" placeholder="House no/society/street" size="20">
+		<br><br>
+			Adress Line2: <input type="text" id=fa2 name="Adress1" placeholder="Area/town" size="20">
+		<br><br>
+			Pincode: <input type="number" id=fa3 name="Adress2" placeholder="Enter your Pincode" size="10">
+		<br><br>
+			City: <input type="text" id=fa4 name="Adress3" placeholder="Enter your City" size="10">
+		<br><br>
+			State: <input type="text" id=fa5 name="Adress4" placeholder="Enter your state" size="15">
+		<br><br>
+			Mobile No: <input id=Mn type="phone" name="Mnumber" placeholder="Enter your Mobile no" onblur="return empty(Mn.value,k1)"><span id="k1"></span>
+		<br><br>
+	Email id: <input type="email" id=Em name="email" placeholder="Enter your Email id" onblur="return empty(Em.value,k2)"><span id="k2"></span>
+		<br><br>
+	Password: <input type="password" id=ps1 name="psw" placeholder="Enter your password" onblur="return empty(ps1.value,k3)"><span id="k3"></span>
+		<br><br>
+	Confirm Password: <input type="password" id=cp1 name="Cpsw" placeholder="Re-enter your password" onblur="return empty(cp1.value,k4)"><span id="k4"></span>
+		<br><br>
+		<input class="butn" type="submit" onclick="return validate()" value="Signup">
+		</td></tr></table>
+	</form>
+
+	<script>
+			f.Name.addEventListener('keydown',key);
+	</script>
+</body>
+</html>

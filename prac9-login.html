@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shop Site</title>
+<style>
+    span{
+        font-size: 20px;
+    }
+	body{
+		background-image:url('https://media.istockphoto.com/id/1146511178/photo/silver-colored-stopwatch-in-front-of-blue-wall.jpg?b=1&s=170667a&w=0&k=20&c=TXKZ1MGw7Ohf_Emd3FtaEljSQWksevo9dswzFJ6dls0=');
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	.butn{
+			background-color: #cbd720;
+		}
+</style>
+<script >
+	function validate(){
+		if (f.p_no.value == ""){
+			alert("Mobile no filed in mandatory.");
+			return false;
+		}
+		else{
+			num=f.p_no.value;
+			let rex = /^\d{10}$/
+			if (!rex.test(num)){
+				alert("Mobile no is not valid");
+				return false;
+			}
+		}
+	}
+</script>
+</head>
+<body>
+	<div style="color: rgb(225, 73, 17); text-align: center; background-color : rgb(59, 97, 152); font-size: X-large;">Shop Under ₹499</div>
+	<center><h4 style="color: Green; font-size: large;">Login</h4>
+    <div >
+        <form action="a.php" action="21bce181-prac9.html"  method="post" name=f>
+            <pre>
+            <span>Mobile no:</span><input type="phone" name="p_no" required><br><br>
+            <span>Password:</span><input type="password" id="password" required><br><br>
+                               <input class="butn" type="submit" value="Login" onclick="return validate()">
+					
+              Don't have an account?  <a href="prac9-signup.html">Create account</a>
+             </pre> 
+         </form>
+            
+    </div>
+      </center>
+   
+    
+</body>
+</html>

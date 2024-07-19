@@ -1,0 +1,439 @@
+<html>
+<head>
+	<link rel="icon" href="https://static.vecteezy.com/system/resources/thumbnails/009/157/893/small/shopping-cart-set-of-shopping-cart-icon-on-white-background-shopping-cart-icon-shopping-cart-design-shopping-cart-icon-sign-shopping-cart-icon-isolated-shopping-cart-symbol-free-vector.jpg" type="image">
+	<title>Shop Site</title>
+	<style>
+		
+		table{
+			display:block;
+			margin-left: auto;
+			margin-right:auto;
+		}
+		#h{
+			text-align:right;
+			height: 30px;
+			background-color : rgb(59, 97, 152);
+		}
+		.discription{
+			display: block;
+			text-justify: auto;
+		}
+		.price{
+			font-size: large;
+		}
+		.oldprice{
+			text-decoration-line: line-through;
+			font-size: small;
+		}
+		.discount{
+			color: lightgreen;
+			
+		}
+		.butn{
+			background-color: #cbd720;
+		}
+	</style>
+	<script>
+		var total=0;
+		var qty=[0,0,0,0,0,0];
+		var price=[159,287,499,499,158,319];
+		function addtocart(z){
+				cart1.style.display="block";
+				z=parseInt(z);
+				qty[z]+=1;
+				total += price[z];
+				if(z == 0){
+					dwd.innerText = "Digital Watch ";
+					dwdmi.style.display="inline";
+					dwd1.innerText="QTY: "+qty[0];
+					dwdpu.style.display="inline";
+					dwd2.innerText=" PRICE: "+(qty[0]*price[0]);
+				}
+				else if (z == 1){
+					fowd.innerText = "FOGG Watch  ";
+					fowdmi.style.display="inline";
+					fowd1.innerText="QTY: "+qty[1];
+					fowdpu.style.display="inline";
+					fowd2.innerText=" PRICE: "+(qty[1]*price[1]);
+				}
+				else if(z == 2){
+					twd.innerText = "TOMMY Watch  ";
+					twdmi.style.display="inline";
+					twd1.innerText="QTY: "+qty[2];
+					twdpu.style.display="inline";
+					twd2.innerText=" PRICE: "+(qty[2]*price[2]);
+				}
+				else if (z==3){
+					fwd.innerText = "FASTRACK Watch  ";
+					fwdmi.style.display="inline";
+					fwd1.innerText="QTY: "+qty[3];
+					fwdpu.style.display="inline";
+					fwd2.innerText=" PRICE: "+(qty[3]*price[3]);
+				}
+				else if (z==4){
+					swd.innerText = "SWISS style Watch  ";
+					swdmi.style.display="inline";
+					swd1.innerText="QTY: "+qty[4];
+					swdpu.style.display="inline";
+					swd2.innerText=" PRICE: "+(qty[4]*price[4]);
+				}
+				else if(z == 5){
+					pwd.innerText = "PIRASO Watch  ";
+					pwdmi.style.display="inline";
+					pwd1.innerText="QTY: "+qty[5];
+					pwdpu.style.display="inline";
+					pwd2.innerText=" PRICE: "+(qty[5]*price[5]);
+				}
+				tot.innerText="TOTAL : ₹"+total;
+		}
+		function minuss(k){
+			k=parseInt(k);
+			qty[k]-=1;
+			total-=price[k];
+			var z=k;
+			if(z == 0){
+				dwd.innerText = "Digital Watch ";
+				dwdmi.style.display="inline";
+				dwd1.innerText="QTY: "+qty[0];
+				dwdpu.style.display="inline";
+				dwd2.innerText=" PRICE: "+(qty[0]*price[0]);
+			}
+			else if (z == 1){
+				fowd.innerText = "FOGG Watch  ";
+				fowdmi.style.display="inline";
+				fowd1.innerText="QTY: "+qty[1];
+				fowdpu.style.display="inline";
+				fowd2.innerText=" PRICE: "+(qty[1]*price[1]);
+			}
+			else if(z == 2){
+				twd.innerText = "TOMMY Watch  ";
+				twdmi.style.display="inline";
+				twd1.innerText="QTY: "+qty[2];
+				twdpu.style.display="inline";
+				twd2.innerText=" PRICE: "+(qty[2]*price[2]);
+			}
+			else if (z==3){
+				fwd.innerText = "FASTRACK Watch  ";
+				fwdmi.style.display="inline";
+				fwd1.innerText="QTY: "+qty[3];
+				fwdpu.style.display="inline";
+				fwd2.innerText=" PRICE: "+(qty[3]*price[3]);
+			}
+			else if (z==4){
+				swd.innerText = "SWISS style Watch  ";
+				swdmi.style.display="inline";
+				swd1.innerText="QTY: "+qty[4];
+				swdpu.style.display="inline";
+				swd2.innerText=" PRICE: "+(qty[4]*price[4]);
+			}
+			else if(z == 5){
+				pwd.innerText = "PIRASO Watch  ";
+				pwdmi.style.display="inline";
+				pwd1.innerText="QTY: "+qty[5];
+				pwdpu.style.display="inline";
+				pwd2.innerText=" PRICE: "+(qty[5]*price[5]);
+			}
+
+			if (qty[k]==0){
+				if(k == 0){
+					dwd.innerText = "";
+					dwdmi.style.display="none";
+					dwd1.innerText="";
+					dwdpu.style.display="none";
+					dwd2.innerText="";
+				}
+				else if (k==1){
+					fowd.innerText = "";
+					fowdmi.style.display="none";
+					fowd1.innerText="";
+					fowdpu.style.display="none";
+					fowd2.innerText="";
+				}
+				else if(k==2){
+					twd.innerText = "";
+					twdmi.style.display="none";
+					twd1.innerText="";
+					twdpu.style.display="none";
+					twd2.innerText="";
+				}
+				else if (k==3){
+					fwd.innerText = "";
+					fwdmi.style.display="none";
+					fwd1.innerText="";
+					fwdpu.style.display="none";
+					fwd2.innerText="";
+				}
+				else if (k==4){
+					swd.innerText = "";
+					swdmi.style.display="none";
+					swd1.innerText="";
+					swdpu.style.display="none";
+					swd2.innerText="";
+				}
+				else if(k==5){
+					pwd.innerText = "";
+					pwdmi.style.display="none";
+					pwd1.innerText="";
+					pwdpu.style.display="none";
+					pwd2.innerText="";
+				}
+			}
+			if (qty[0]==0 && qty[1]==0 &&  qty[2]==0 && qty[3]==0 && qty[4]==0 && qty[5]==0 ){
+				cart1.style.display="none";
+			}
+			tot.innerText="TOTAL : ₹"+total;
+		}
+		function pluss(k){
+			k=parseInt(k);
+			qty[k]+=1;
+			total+=price[k];
+			var z=k;
+			if(z == 0){
+				dwd.innerText = "Digital Watch ";
+				dwdmi.style.display="inline";
+				dwd1.innerText="QTY: "+qty[0];
+				dwdpu.style.display="inline";
+				dwd2.innerText=" PRICE: "+(qty[0]*price[0]);
+			}
+			else if (z == 1){
+				fowd.innerText = "FOGG Watch  ";
+				fowdmi.style.display="inline";
+				fowd1.innerText="QTY: "+qty[1];
+				fowdpu.style.display="inline";
+				fowd2.innerText=" PRICE: "+(qty[1]*price[1]);
+			}
+			else if(z == 2){
+				twd.innerText = "TOMMY Watch  ";
+				twdmi.style.display="inline";
+				twd1.innerText="QTY: "+qty[2];
+				twdpu.style.display="inline";
+				twd2.innerText=" PRICE: "+(qty[2]*price[2]);
+			}
+			else if (z==3){
+				fwd.innerText = "FASTRACK Watch  ";
+				fwdmi.style.display="inline";
+				fwd1.innerText="QTY: "+qty[3];
+				fwdpu.style.display="inline";
+				fwd2.innerText=" PRICE: "+(qty[3]*price[3]);
+			}
+			else if (z==4){
+				swd.innerText = "SWISS style Watch  ";
+				swdmi.style.display="inline";
+				swd1.innerText="QTY: "+qty[4];
+				swdpu.style.display="inline";
+				swd2.innerText=" PRICE: "+(qty[4]*price[4]);
+			}
+			else if(z == 5){
+				pwd.innerText = "PIRASO Watch  ";
+				pwdmi.style.display="inline";
+				pwd1.innerText="QTY: "+qty[5];
+				pwdpu.style.display="inline";
+				pwd2.innerText=" PRICE: "+(qty[5]*price[5]);
+			}
+
+			tot.innerText="TOTAL : ₹"+total;
+		}
+		function clearr(){
+
+			if (total>0){
+				alert("Order placed!!");
+				dwd.innerText ="";
+				dwdmi.style.display="none";
+				dwd1.innerText="";
+				dwdpu.style.display="none";
+				dwd2.innerText="";
+				fowd.innerText ="";
+				fowdmi.style.display="none";
+				fowd1.innerText="";
+				fowdpu.style.display="none";
+				fowd2.innerText="";
+				twd.innerText ="";
+				twdmi.style.display="none";
+				twd1.innerText="";
+				twdpu.style.display="none";
+				twd2.innerText="";
+				fwd.innerText ="";
+				fwdmi.style.display="none";
+				fwd1.innerText="";
+				fwdpu.style.display="none";
+				fwd2.innerText="";
+				swd.innerText = "";
+				swdmi.style.display="none";
+				swd1.innerText="";
+				swdpu.style.display="none";
+				swd2.innerText="";
+				pwd.innerText="";
+				pwdmi.style.display="none";
+				pwd1.innerText="";
+				pwdpu.style.display="none";
+				pwd2.innerText="";
+				tot.innerText="";
+				total=0;
+			}
+			else{
+				return false;
+			}
+			cart1.style.display="none";
+			return true;
+		}
+	</script>
+</head>
+<body >
+	<div style="color: rgb(225, 73, 17); text-align: center; background-color : rgb(59, 97, 152); font-size: X-large;">Shop Under ₹499</div>
+	<div id="h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><a href="prac9-login.html" style="color: rgb(187, 20, 220); font-size: large;">Login</a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+	<br><br><br>
+
+	<table  width="80%" cellspacing="5" cellpadding="5">
+	<tr>
+	<td width="25%">
+	<img src="https://rukminim1.flixcart.com/image/832/832/xif0q/shopsy-watch/e/k/r/watch-mens-for-kids-women-men-couple-electronic-digital-sports-original-imaggf8ygw2phz8g.jpeg?q=70" width="200px" hight="200px">
+	</td>
+	<td widht="25%">
+	<div class="discription">
+		Digital Watch - For Boys & Girls Watch Mens For kids Women Men Couple Electronic Digital Sports Watch
+	</div>
+
+	<br>
+	<div>
+		<span class="discount" style="color: forestgreen;">Special price</span><br>
+		<span class="price">₹159</span>&nbsp;&nbsp;<span class="oldprice">₹499</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="discount">68% off</span>
+	</div>
+	<br><br>
+	<div>
+		<button class="butn" onclick="return addtocart('0')"> Add to cart </button>
+	</div>
+	</td>
+	<td width="25%">
+		<img src="https://rukminim1.flixcart.com/image/832/832/kerfl3k0pkrrdj/watch/v/s/x/2038-wh-fogg-original-imafvhvvpct6qmxb.jpeg?q=70" width="200px" hight="200px">
+	</td>
+	<td widht="25%">
+		<div class="discription">
+			FOGG <br>
+			2038-WH Day and Date Analog Watch - For Men 2038-WH
+		</div>
+	
+		<br>
+		<div>
+			<span class="discount" style="color: forestgreen;">Special price</span><br>
+			<span class="price">₹287</span>&nbsp;&nbsp;<span class="oldprice">₹1799</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="discount">84% off</span>
+		</div>
+		<br><br>
+		<div>
+			<button class="butn" onclick="return addtocart('1')"> Add to cart </button>
+		</div>
+	</td>
+	</tr>
+	<tr>
+		<td width="25%">
+			<img src="https://rukminim1.flixcart.com/image/832/832/kl2mljk0/watch/n/i/c/th1791385-tommy-hilfiger-original-imagyaftrg4hhakh.jpeg?q=70" width="200px" hight="200px">
+		</td>
+		<td widht="25%">
+			<div class="discription">
+				TOMMY HILFIGER <br>
+				Analog Watch - For Men TH1791385
+			</div>
+		
+			<br>
+			<div>
+				<span class="discount" style="color: forestgreen;">Special price</span><br>
+				<span class="price">₹499</span>&nbsp;&nbsp;<span class="oldprice">₹6329</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="discount">93% off</span>
+			</div>
+			<br><br>
+			<div>
+				<button class="butn" onclick="return addtocart('2')"> Add to cart </button>
+			</div>
+		</td>
+		<td width="25%">
+			<img src="https://rukminim1.flixcart.com/image/832/832/k4rcmfk0pkrrdj/watch-refurbished/m/n/e/c-3166kl02-fastrack-original-imaf9zxxhsupn38e.jpeg?q=70" width="200px" hight="200px">
+		</td>
+		<td widht="25%">
+			<div class="discription">
+				Fastrack <br>
+				All Nighters Analog Watch - For Men 3166KL02
+			</div>
+		
+			<br>
+			<div>
+				<span class="discount" style="color: forestgreen;">Special price</span><br>
+				<span class="price">₹499</span>&nbsp;&nbsp;<span class="oldprice">₹3450</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="discount">86% off</span>
+			</div>
+			<br><br>
+			<div>
+				<button class="butn" onclick="return addtocart('3')"> Add to cart </button>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td width="25%">
+			<img src="https://rukminim1.flixcart.com/image/832/832/xif0q/watch/l/o/x/-original-imagnu3njhjzh6ak.jpeg?q=70" width="200px" hight="200px">
+		</td>
+		<td widht="25%">
+			<div class="discription">
+				Swisstyle <br>
+				Analog Watch - For Men SS-GR825-BLK-BRW
+			</div>
+		
+			<br>
+			<div>
+				<span class="discount" style="color: forestgreen;">Special price</span><br>
+				<span class="price">₹159</span>&nbsp;&nbsp;<span class="oldprice">₹1499</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="discount">89% off</span>
+			</div>
+			<br><br>
+			<div>
+				<button class="butn" onclick="return addtocart('4')"> Add to cart </button>
+			</div>
+		</td>
+		<td width="25%">
+			<img src="https://rukminim1.flixcart.com/image/832/832/xif0q/watch/k/y/p/1-d-d-f95-blue-silver-chain-piraso-men-original-imagkyg5pyjgzhtz.jpeg?q=70" width="200px" hight="200px">
+		</td>
+		<td widht="25%">
+			<div class="discription">
+				PIRASO <br>
+				ANALOG DAY AND DATE WORKING DISPLAY BLUE DIAL&SILVER CHAIN WATCH
+			</div>
+		
+			<br>
+			<div>
+				<span class="discount" style="color: forestgreen;">Special price</span><br>
+				<span class="price">₹319</span>&nbsp;&nbsp;<span class="oldprice">₹1599</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="discount">80% off</span>
+			</div>
+			<br><br>
+			<div>
+				<button class="butn" onclick="return addtocart('5')"> Add to cart </button>
+			</div>
+		</td>
+	</tr>
+	</table>
+	<div id="cart1" style="display: none; background-color: rgb(18, 201, 18);">
+		<center><span style="font-size: xx-large;"><b>CART</b></span></center>
+		<br><br>
+		<table align="center" width="50%" style="display: block; margin-left: auto; margin-right: auto;">
+			<tr>
+				<td><span id="dwd"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="return minuss('0')" style="display: none;" id="dwdmi" value="-">-</button><span id="dwd1"></span><button onclick="return pluss('0')" id="dwdpu" style="display: none;" value="+">+</button><span id="dwd2"></span></td>
+			</tr>
+			<tr>
+				<td><span id="fowd"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="return minuss('1')" style="display: none;" id="fowdmi" value="-">-</button><span id="fowd1"></span><button id="fowdpu" onclick="return pluss('1')" style="display: none;" value="+">+</button><span id="fowd2"></span></td>
+			</tr>
+			<tr>
+				<td><span id="twd"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button style="display: none;" onclick="return minuss('2')" id="twdmi" value="-">-</button><span id="twd1"></span><button id="twdpu" onclick="return pluss('2')" style="display: none;" value="+">+</button><span id="twd2"></span></td>
+			</tr>
+			<tr>
+				<td><span id="fwd"></span><button onclick="return minuss('3')" style="display: none;" id="fwdmi" value="-">-</button><span id="fwd1"></span><button id="fwdpu" onclick="return pluss('3')" style="display: none;" value="+">+</button><span id="fwd2"></span></td>
+			</tr>
+			<tr>
+				<td><span id="swd"></span><button onclick="return minuss('4')" style="display: none;" id="swdmi" value="-">-</button><span id="swd1"></span><button id="swdpu" onclick="return pluss('4')" style="display: none;" value="+">+</button><span id="swd2"></span></td>
+			</tr>
+			<tr>
+				<td><span id="pwd"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="return minuss('5')" style="display: none;" id="pwdmi" value="-">-</button><span id="pwd1"></span><button id="pwdpu" onclick="return pluss('5')" style="display: none;" value="+">+</button><span id="pwd2"></span></td>
+			</tr>
+			<tr>
+				<td>
+					<br><br><br>
+					<span id="tot"></span>
+				</td>
+			</tr>
+		</table>
+		<center><button class="butn" value="Order" onclick="return clearr()"> PLACE ORDER</button></center>
+	</div>
+</body>
+</html>
